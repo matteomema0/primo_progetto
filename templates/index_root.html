@@ -1,6 +1,6 @@
 {% extends "base.html"%}
 
-{%block title%} {{block.super}} primo_progetto s| IndexRoot {%endblock title%}
+{%block title%} {{block.super}} primo_progetto | IndexRoot {%endblock title%}
 {%block content%}
 
     <h1></h1>
@@ -9,6 +9,7 @@
         <li><a href=" {% url 'prima_app:index'%}">Prima app</a></li>
         <li><a href=" {% url 'seconda_app:index2'%}">Seconda app</a></li>
         <li><a href=" {% url 'news:index3'%}">news</a></li>
+        <li><a href=" {% url 'Corsi_di_Formazione:index4'%}">Corsi di Formazione</a></li>
     </ol>
 
 {%endblock content%}
