@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'prima_app',
     'seconda_app',
     'news',
-    'Corsi_di_Formazione',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +62,6 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR,'prima_app/templates'),
                  os.path.join(BASE_DIR,'seconda_app/templates'),
                  os.path.join(BASE_DIR, 'news/templates'),
-                 os.path.join(BASE_DIR, 'Corsi_di_Formazione/templates'),
                  os.path.join(BASE_DIR,'templates')],
                 
         'APP_DIRS': True,
@@ -132,3 +130,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
