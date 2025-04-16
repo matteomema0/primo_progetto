@@ -1,4 +1,7 @@
+
+{% extends 'base.html' %}
 {%block content%}
+
     <table class="table table-responsive">
         <tr>
             {% if request.user.is_authenticated%}
@@ -13,7 +16,7 @@
     {%for c in contatti %}
         <tr>
             {% if request.user.is_authenticated%}
-            <td><a href={%url 'forms_app: elimina-contatto' c.pk%} ><i class="fas fa-eraser"></i></a> </td>
+            <td><a href={%url 'forms_app:elimina-contatto' c.pk%} ><i class="fas fa-eraser"></i></a> </td>
             <td><a href={%url 'forms_app:modifica-contatto' c.pk%} ><i class="far fa-edit"></i></a> </td>
             {% endif%}
             <td>{{c.nome}}</td>
